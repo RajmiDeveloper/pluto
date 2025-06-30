@@ -1,0 +1,28 @@
+<!-- resources/views/prueba.blade.php -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Prueba Genova</title>
+</head>
+<body>
+    <a href="{{ url('/clientes') }}">
+        <button type="submit" name="enviar">
+            Clientes    
+        </button>
+    </a>
+    <a href="{{ url('/productos') }}">
+        <button type="submit" name="enviar">
+            Productos 
+        </button>
+    </a>
+    <br>
+    <a href="{{ url('/facturador') }}">
+        <button type="submit" name="enviar">
+            Facturador
+        </button>
+    </a>
+
+</body>
+</html>
