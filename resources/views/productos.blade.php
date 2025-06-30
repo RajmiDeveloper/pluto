@@ -69,6 +69,11 @@
         ${{ $prod->precio }}
         {{ "|" }}
         {{ $prod->stock }} u
+        <a href="{{ route('editor.edit', ['productos', $prod->id, "productos"]) }}">
+          <button type="button" >
+            editar
+          </button>
+        </a>
       </li>
     @endforeach
   </ul>
