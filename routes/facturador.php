@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
-//cambio nulo
 Route::get('/facturador', function() {
     $clientes = DB::table('clientes')->select('*')->get();
     return view('facturador', compact('clientes'));
