@@ -54,7 +54,6 @@
     if (!input.classList.contains('autocomplete-input')) return;
     const wrapper = input.closest('[data-autocomplete]');
     const route = wrapper.dataset.route;
-    //wrapper.removeAttribute("data-route")
     const labelField = wrapper.dataset.labelField;
     const valueField = wrapper.dataset.valueField;
     const extraField = wrapper.dataset.extraField;

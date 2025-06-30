@@ -10,7 +10,6 @@
   </a>
   <h1>CLIENTES</h1>
 
-  <!-- Mensaje de éxito -->
   @if(session('status'))
     <p style="color: green;">{{ session('status') }}</p>
   @endif

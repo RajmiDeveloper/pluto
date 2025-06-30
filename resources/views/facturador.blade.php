@@ -27,7 +27,6 @@
 
   <form action="{{ route('facturador.store') }}" method="POST">
     @csrf 
-    <!-- Cliente Autocomplete -->
     <x-autocomplete
       id="cliente"
       name="cliente_name"
@@ -41,7 +40,6 @@
       class="cliente"
     />
 
-    <!-- Tipo de movimiento -->
     <div style="margin-top:1em;">
       <label for="tipo_movimiento">Tipo:</label><br>
       <select id="tipo_movimiento" name="tipo_movimiento" required>
@@ -53,7 +51,6 @@
       </select>
     </div>
 
-    <!-- Tabla dinámica de productos -->
     <table id="detalle">
       <thead>
         <tr>
@@ -82,7 +79,6 @@
     <button type="submit" style="margin-top:1em;">Generar factura</button>
   </form>
 
-  <!-- Template para fila de producto -->
   <template id="tpl-producto">
     <tr id="fila">
       <td style="position:relative; width:200px;">
@@ -187,7 +183,6 @@
       impEl.dataset.row = idx
       impEl.dataset.column =5
 
-      // Escucha evento extra para precio
       const nameInput = row.querySelector('.autocomplete-input');
       nameInput.addEventListener('click', () => {
         basePrice = parseFloat(nameInput.querySelector('.contenedor').dataset.extra) || 0;
@@ -199,7 +194,6 @@
         recalc();
       });
 
-      // Recalcular importe
       [qtyInput, discInput].forEach(i => i.addEventListener('input', () => {
         const q = parseFloat(qtyInput.value) || 0;
         const d = parseFloat(discInput.value) || 0;
@@ -209,7 +203,6 @@
         recalc();
       }));
 
-      // Eliminar fila
       row.querySelector('.remove-row').addEventListener('click', () => {
         row.remove();
         recalc();
@@ -234,23 +227,15 @@
     document.getElementById('addRow').addEventListener('click', addRow);
     addRow();
 
-
-
-
-    // Evento al Seleccionar un autocomplete-option
     document.body.addEventListener('click', e => {
       if (e.target.matches('.autocomplete-suggestions li')) {
         const li = e.target;
         if(li.matches(".autocomplete-option-precio")){
           const row = li.closest('tr');
 
-          // Extraer precio del producto
           const precioUnitario = parseFloat(li.dataset.extra) || 0;
           
-          // Colocar precio
           row.querySelector('.preciou').value = precioUnitario.toFixed(2);
-
-          //Habilitar campos
           row.querySelector('.preciou').removeAttribute('disabled')
           row.querySelector('.cantidad').removeAttribute('disabled')
           row.querySelector('.descuento').removeAttribute('disabled')

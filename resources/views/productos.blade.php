@@ -10,14 +10,12 @@
   </a>
   <h1>PRODUCTOS</h1>
 
-  <!-- Mensaje de éxito -->
   @if(session('status'))
     <p style="color: green;">{{ session('status') }}</p>
   @endif
 
-  <!-- Formulario de alta -->
   <form action="{{ route('productos.store') }}" method="POST">
-    @csrf                                  {{-- Protege contra CSRF --}}
+    @csrf                              
     <input 
       type="text" 
       name="descripcion" 
