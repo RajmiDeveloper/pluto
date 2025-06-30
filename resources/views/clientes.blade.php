@@ -76,19 +76,24 @@
 
   <hr>
 
-  <!-- Listado de clientes -->
-  <ul>
-    @foreach($clientes as $cli)
-      <li>
-        {{ $cli->nombre }}
-        {{ $cli->apellido }}
-        {{ $cli->identificacion }} 
-        (+54 {{ $cli->telefono ?? 'sin teléfono' }})
-        {{ $cli->direccion ?? 'sin dirección' }}
-        ${{ $cli->saldo }}
-      </li>
-    @endforeach
-  </ul>
+<ul>
+  @foreach($clientes as $cli)
+    <li style="width:100%; margin-bottom:.5em;">
+      {{ $cli->nombre }} {{ $cli->apellido }}
+      ({{ $cli->identificacion }})
+      — +54 {{ $cli->telefono ?? 'sin teléfono' }}
+      — {{ $cli->direccion ?? 'sin dirección' }}
+      — Saldo: ${{ number_format($cli->saldo,2) }}
+      
+      <a href="{{ route('editor.edit', ['clientes', $cli->id, "clientes"]) }}">
+        <button type="button" >
+          editar
+        </button>
+      </a>
+    </li>
+  @endforeach
+</ul>
+
 
 </body>
 </html>

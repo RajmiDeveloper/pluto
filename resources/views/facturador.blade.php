@@ -17,6 +17,9 @@
 
 
 <body>
+    <a href="{{ url('/') }}">
+    <button type="button">Volver</button>
+  </a>
   <h1>FACTURADOR</h1>
   @if(session('status'))
     <p style="color:green;">{{ session('status') }}</p>
