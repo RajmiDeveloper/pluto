@@ -17,11 +17,17 @@
             Productos 
         </button>
     </a>
+        </a>
+        <a href="{{ url('/facturas') }}">
+        <button type="submit" name="enviar">
+            Facturas
+        </button>
+    </a>
     <br>
     <a href="{{ url('/facturador') }}">
         <button type="submit" name="enviar">
             Facturador
         </button>
-    </a>
+
 </body>
 </html>
