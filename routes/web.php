@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 Route::match(['get','post'], '/', function () {
     return view('welcome');
 });
-
+include __DIR__ . '/head.php'; 
 require __DIR__ . '/clientes.php';
 require __DIR__ . '/productos.php';
 require __DIR__ . '/facturador.php';

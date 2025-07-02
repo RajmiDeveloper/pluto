@@ -1,7 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
   <title>PRODUCTOS</title>
 </head>
 <body>

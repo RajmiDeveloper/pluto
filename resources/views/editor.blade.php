@@ -1,9 +1,4 @@
-{{-- resources/views/editor.blade.php --}}
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Editor genérico: {{ $table }} #{{ $id }}</title>
+<title>Editor genérico: {{ $table }} #{{ $id }}</title>
 </head>
 <body>
   <h1>Editar {{ ucfirst($table) }} #{{ $id }}</h1>
