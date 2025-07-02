@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>FACTURADOR</title>
+<title>FACTURADOR</title>
   <style>
     .autocomplete-wrapper { position: relative; display:inline-block; width:300px; }
     .autocomplete-input { width: 100%; padding:.5em; box-sizing:border-box; border:1px solid #ccc; }

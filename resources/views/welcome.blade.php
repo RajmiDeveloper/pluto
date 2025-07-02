@@ -1,9 +1,3 @@
-<!-- resources/views/prueba.blade.php -->
-
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
     <title>Prueba Genova</title>
 </head>
 <body>
